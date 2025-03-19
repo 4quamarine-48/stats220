@@ -28,4 +28,8 @@ Why do I love it so much? Well, let's see...
 * The Force
 * Lightsabers
 * Spaceships
-* And all the other cool stuff! 
+* And all the other cool stuff!
+
+**It's not doing too well at the moment... But I still love it!*
+
+![](https://media1.giphy.com/media/26wBamr8ywqrEd4E8/giphy.gif?cid=6c09b952axhpyn5qvcub4fyowkhf6u3t5fgpr5ch05poumug&ep=v1_gifs_search&rid=giphy.gif&ct=g)
