@@ -1,0 +1,52 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+
+```
+
+```{css}
+h2{font-family: 'Impact'; background-color: #FABA70; padding:20px}
+body{font-family: 'Verdana'; color: #153875; background-color: #FFFFF1}
+```
+
+## Toys! What's popular?
+
+Let's take a look...
+
+```{r}
+library(tidyverse)  # packages of course
+file_csv <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vQYizMjY4DhOb78l1OexUXT0p9qdea_HUliW-D57VDq7DjZt3Z4xT8F_NhaKD3p7908Cwbk-FDTLyxl/pub?output=csv"
+
+logged_data <- read_csv(file_csv)
+
+most_amount <- max()
+
+latest_data <- logged_data %>%  # Now rename to make it make sense
+  rename(vendor = 2,
+         type_instore = 3,
+         focus = 4,
+         focus_count = 5,
+         focus_theme = 6)
+
+most_amount <- max(latest_data$focus_count) 
+
+paste("The highest amount on display is",
+      most_amount)
+
+ggplot(data = latest_data) +
+  geom_bar(aes(y = focus_count, fill = focus))
+
+ggplot(data = latest_data) +
+  geom_bar(aes(y = focus, fill = focus_theme))
+
+
+```
+
+
+*Why not keep the cat here?*
+
+![](https://c.tenor.com/-qBsG1HwR4oAAAAC/tenor.gif)
